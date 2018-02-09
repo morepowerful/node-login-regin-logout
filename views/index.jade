@@ -1,0 +1,14 @@
+extends layout
+
+block content
+    div
+        h1(style="display:inline-block")= title
+        li(style="display:#{isShowLogin ? 'inline-block' : 'none'}")
+            a(href='/login') 登录
+        li(style="display:#{isShowLogin ? 'inline-block' : 'none'}")
+            a(href='/reg') 注册
+        li(style="display:#{isShowLogout ? 'inline-block' : 'none'}")
+            a(href='/logout') 注销
+    p Welcome to #{title}
+    each item in items
+        div= item
